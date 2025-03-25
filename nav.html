@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+        <title>
+            interactive navigation menu
+        </title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <nav id="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            
+<h1>VLSI DESIGN</h1>
+<p>VLSI (Very large scale integration) is a process of integrating hundreds or thousands of transistors onto a single silicon semiconductor microchip. In present years, contemporary VLSI technology Complex digital systems can now be realized on a single silicon chip. Designers of Custom systems find this technology, particularly attractive since it allows for significant cost reductions by compressing a large amount of digital logic complexity into a single chip.
+
+    The number of uses for integrated circuits (ICs) in high performance computing, telecommunications, image and video processing, and consumer electronics has been growing quickly since the introduction of very large scale integration (VLSI) designs. Silicon CMOS technology has emerged as the fabrication process within the last few years. The quick increase in transistors integrated into a single chip’s circuit illustrates the revolutionary significance of these developments.</p>
+    
+    <br>
+
+    <img src="C:\Users\Lenovo\OneDrive\Desktop\webpage\vlsi.jpg" id="cen">
+    <p>
+        A VLSI chip goes through several stages of VLSI design, from the chip’s specification to the final product’s fabrication. The following steps are involved in the design process:
+
+        <h5>Design Specification</h5>
+        Some specifications involved in VLSI design are power consumption, performance, and functionality and area of chip that are make used in the design specifications.
+        Digital devices has some specifications in VLSI design like abstract description of the architecture that must to be designed.
+        <h5 >Architectural Design</h5>
+        After design specification, the architecture of chip is designed. So, to make the architecture of the design by some requirements of the functionality, performance, or general system requirements.
+        In this design, all the connections and functions are specified by the component of the chip.
+        <h5>RTL Design</h5>
+        Using integrated circuits (ICs), designing of electronic circuits is the Register Transfer Level (RTL) design at a high level description.
+        The RTL description of the digital circuit is written in hardware description language (HDL) such as VHDL or Verilog, works as the input. The RTL description expresses the functionality and behavior of the circuit at a high level description.
+        <h5>Functional Verification</h5>
+        Using simulation tools, It simulates the behavior and functionality of the integrated circuit in unique input cases and to meet the specified requirements by design verification to test the ASIC design.
+        Our goal is to make sure that chip functions correctly by ensuring to test the ASIC design by verification so it’s behavior is managed by checking specifications and requirements of functionality of design.
+        <h5>Logic Synthesis</h5>
+        Logic Synthesis defines the RTL code that transforms into a gate-level netlist by using synthesis tool, which represents the logical architecture of the circuit in terms of standard cells.
+        Using HDL (Verilog/VHDL), it produces a gate-level netlist that is a description of logic cells and their interconnections. These tools map the functionality described in the HDL to a set of standard cells or library elements.
+        Performance, size, and power consumption of the design are all optimized during the synthesis process.
+        <h5>Logical Verification</h5>
+        A verification is required to be performed to verify whether the synthesis tool produced the gate-level netlist accurately.
+        The output of Logic synthesis are gate-level netlist that is given as input to the Physical design after verification and testing.
+        <h5>Physical Design</h5>
+        In this step, gate-level netlist is converted into a physical layout. Layout is a representation of an IC in terms of planar geometric shapes which correspond to the patterns of metal-oxide or semiconductor layers that make up the components of the IC. A design tool like Cadence Virtuoso is used to create layouts.
+        In physical design step, it is divided into sub-steps such as Partitioning, floorplanning, placement, clock-tree synthesis, routing, timing closure are formed.
+        Given below are the Steps for Physical Design:
+        
+        Partitioning: It is the process of dividing a system on chip (SoC) into small blocks. As a result, you can effectively manage semiconductor designs as a group of connected functional blocks. The best way to handle semiconductor designs is as related groups of functional blocks.
+        Floorplanning: Floorplanning is a process of placing the various blocks and I/O ports across the chip area based on the design constraints. Floorplanning involves determining the physical layout of the IC on the semiconductor wafer or die.
+        Placement: Placement involves assigning physical locations to the standard cells and other components on the chip according to the floorplan.
+        Clock Tree Synthesis: It is the process of connecting the clocks to all clock pin of sequential circuits by using inverters/buffers in order to balance the skew and to minimize the insertion delay. A single clock source powers each and every clock pin. Clock Tree Synthesis is used to minimize delay and skew.
+        Routing: Once every element is positioned, a detailed and global routing is started to establish connections between all the elements. It involves physically connecting metal traces to macros, standard cells, I/O ports, power, and the clock.
+        Timing Closure: It is the process that determines a chip’s speed by satisfying the timing constraints. For a smoother chip operation, it makes sure that all of the signals arrive at the appropriate time. Timing closure involves ensuring that the circuit meets timing requirements, such as setup and hold times, clock frequency, and maximum propagation delays.
+        <h5>Physical Verification and Sign off</h5>
+        This stage undergoes 3 steps of physical verification known as sign off checks.
+        It helps to check whether the layout is working correctly the way it was designed to.
+        Given below are the Steps for Physical Verification:
+        
+        Layout v/s Schematic (LVS):It is the process of verifying the layout is compared with the schematic whether their functionality matches or not.
+        Design Rule check (DRC):It is the process of verifying whether the given layout follows the design rules given by the fabrication team. DRC checks implies to physical checks of spacing rules between metals, minimum width rules, etc.
+        Logic equivalence checking (LEC):It is a formal verification technique used in VLSI design to verify that two different representations of a digital circuit, often an RTL description and a gate-level netlist, exhibit functional equivalence.
+        <h5>Fabrication</h5>
+        Output of Layout is GDS-II (Graphical Data Stream Information Interchange) file produced and used by the semiconductor foundries to fabricate the silicon.
+        After physical verification step, the design is ready for fabrication. Tape out is the final result of the design process for ICs before they are sent for manufacturing.
+        The Tape out is specifically the point at which the graphic for photo-mask of the circuit is sent to foundry.
+        Fabrication process consists of several steps involving wafer growth, epitaxial growth, etching, doping, deposition, and diffusion of various materials on the wafer. One mask is used during every step.
+        <h5>Packaging and Testing</h5>
+        Each of the wafers contains hundreds of chips. The technique of “scribing and cleaving” is used to divide and package these chips. Chips that don’t pass an electrical test are discarded.
+        Every chip is tested and packed to make sure it satisfies all design requirements and operates as intended.
+        Design and Implementation of VLSI
+        Let’s discuss the Design and Implementation of VLSI by learning the different aspects of IC design in various fields of digital circuit that comes under the VLSI domain:
+        
+        <h5>Digital VLSI Design</h5>
+        Transistors, logic gates and other electronic components are made by designing of digital circuits known as Digital VLSI design.
+        Microprocessors, memory devices, controllers are the digital devices that comes in digital VLSI domain.
+        <h5>Analog VLSI Design</h5>
+        Analog devices are involved in the process of processing continuous signals by designing and implementation of the analog circuits.
+        Analog VLSI domain includes some devices like digital-to-analog converters (DACs), filters, oscillators, amplifiers, etc.
+        <h5>Mixed-Signal VLSI Design</h5>
+        In mixed-signal VLSI, both analog and digital VLSI techniques are combined on a single chip.
+        Both analog and digital VLSI techniques are combined oftenly in SoCs (System on Chip) so to ensure that both analog and digital devices are needed by complex system that is created for the mixed-signal VLSI.
+        <h5>RF (Radio Frequency) VLSI Design</h5>
+        RF VLSI design involves the main aim of making the integrated circuits for wireless communication devices such as radios, transceivers, etc.
+        For the aspect of applications, it involves the designing of circuits that has increased the efficiency for devices like Bluetooth, RFID, Wi-Fi, etc. that works at radio frequencies.
+        <h5>Low-Power VLSI Design</h5>
+        Low power VLSI design is used to reduce the power consumption of integrated circuits that used in various applications like Internet of Things, battery operated devices and devices which are energy efficient.
+        Some methods that are used to make use of low power VLSI operation are voltage scaling, power gating, clock gating, some devices which are energy efficient.
+        <h5>ASIC (Application-Specific Integrated Circuit) Design</h5>
+        The process of designing specialized integrated circuits for specific tasks or objectives is known as ASIC design.
+        ASICs are suitable for specific applications including image processing, sensor interfaces, cryptographic algorithms, and automotive electronics as they improve performance, power economy, and area usage.
+        <h5>FPGA (Field-Programmable Gate Array) Design</h5>
+        FPGA involves some digital logic devices which needs to be configured and programming the FPGA design so to make the digital circuits by make use of configured digital logic devices.
+        In FPGA design, some specific applications like prototyping, etc. are used for fast growth of FPGA design.
+    </p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
